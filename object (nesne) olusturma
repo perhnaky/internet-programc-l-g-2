@@ -1,0 +1,75 @@
+// oncelikle bir class tanimi yapalim
+
+class Futbolcu {
+public $adSoyad;
+public $takim;
+public $golSayisi;
+public $asistSayisi;
+
+    public function golAt()
+   {
+   $this--> gol ++;
+   }
+   public function asistYap()
+   {
+   $this--> asist ++;
+   }
+   public function transferOl01($yeniTakim)
+   {$this-->takim = $yeniTakim;
+   }
+}
+
+// yukaridaki kodlara gore futbolcu adinda bir class tanimi yaptik bu classin adsoyad takim gol ve asist isimlerinde dort tane degiskeni bulunmaktadir. 
+// yine futbolcunun gol sayisini asist sayisini arritan transfer olmasini saglayan yeeni takimini degistiren uc tane fonksiyon tanimladik.
+
+    // simdi bu classi kullanarak yeni bir nesne tanimi yapalim
+    
+    
+    
+    $ messi = new Futbolcu();
+    
+    // yeni bir nesne belirlemek icin once isim belirleriz 
+    // yeni bir nesne tanimi icin NEW anahtar kelimesi kullanilir. ardindan hangi class yapisinda nesne uretmek istiyorsak o classin adi yazilir
+    // yukaridaki ifadeye gore $messi adinda bir nesne tanimladik ancak herhangi bir ozelligini atamadik simdi bu nesnenin degiskenlerine deger atayalim
+    
+    
+   $messi --> adSoyad = "Lionel Messi";
+   $messi --> takim = "Barcelona";
+   $messi --> gol = 45;
+   $messi--> asist = 40;
+   
+   
+   // bir nesnenin degiskenlerine deger atamak icin --> ifadesi kullanilir 
+   // ardindan degisken yazilir ancak basina $ isareti konmaz 
+   //sonrasinda ayni degiskenlere deger atama isleminde oldugu gibi esittir isaretinin karsisina deger yazilir 
+   // herhagi bir nesneye ait komutlari echo komutuyla ekrana yazdirabiliriz 
+   
+   
+   echo $mesii--> gol;
+   echo $messi --> takim;
+   
+   // yukaridaki kodlara gore once $messi nesnesinin gol degeri yani 45ardindanda takimi yani barcelona ekrana yzazilacaktir
+   
+   
+   // simdide ayni nesneye ait fonksiyonlara erisim saglayalim 
+   
+   
+   $messi --> golat();
+   $messi --> asistYap();
+   
+   // yukaridaki ornekte golAt() ve asistYap() fonksiyonlarini cagirdiktan sonra futbolcunun gol sayisi ve asist sayisi bir artacaktir cunku class icinde tanimladigimiz bu islei yerine getiren kodlari yazmistik
+   
+   //$messi nesnesine ait transferol() fonksiyonunu cagiralim 
+   
+   $messi --> transferOl("inter")
+   
+   
+  //futbolcu classi icinde tanimladigimiz transferOl() fonksiyonu parametre olarak gelen takimin adini futbolcunun takimi olarak ayarlar
+  //yani futbolcunun takimi degismekte futbolcu transfer olamktadir 
+  
+  // bu fonksiyonu calistirdiktan sonra $messi nesnesine ait takim degerini ekrana yazdiralim 
+  
+     echo $messi --> takim;
+     
+     // bu ifadenin ekran ciktisi Inter olacaktir 
+     // cunku biz transferOl() fonksiyonunu cagirarak $messi nesnesinin takim degerini inter olarak degitirmistik
