@@ -1,0 +1,35 @@
+//php de class tanimmlama islemi asagidaki gibidir.
+ 
+ class classAdi{
+ //islemler
+ }
+// class olusturuken istedigimiz ismi verebiliriz ancakk tasarlamak istedgimiz nesneye ait genel gecer bir isim vermek uygun olacaktir
+
+// class icerisinde nesneye ait ozellikleri degisken nesneye ait eylemleriyani islemleri function yapilari ile tanimliyoruz. ornegin futbolcu classi olusturup birkac ozellik tanimlayalim.
+
+class Futbolcu{
+
+public $adSoyad;
+public $takim;
+public $golSayisi;
+public $asistSayisi;
+}
+
+// yukaridaki tanimda aslinda sunu demek istedik bizim futbolcu adinda bir classimiz olacak bu classinda adSoyad, takim, golSayisi, asisitSayisi adinda dort dort ozelligi olacak bu ozellikleri yani degiskenleri arttirmak mumkun.
+
+// olusturdugumuz bu class icerisinde degisken tanimlayarak nesnenin ozelliklerini belirttik peki bu nesneye ait islemleri eylemleri yani fonksiyonlari nasil tanimliyoruz?
+
+
+class Futbolcu{
+public $adSoyad;
+public $takim;
+public $golSayisi;
+public $asistSayisi;
+ 
+ function golAt(){
+ // islemler  
+ }
+ function asistYap();{
+ // islemler 
+ }
+ }
